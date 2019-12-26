@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" viewport-fit=cover'>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="common.css">
     <title>Document</title>
     <style>
         *{box-sizing: border-box;}
+        body{padding-top:constant(safe-area-inset-top);padding-top:env(safe-area-inset-top)}
         header{position:fixed;width:100%;top:0;left:0;z-index:999;background:#fff;border-bottom:1px solid red;
         flex: 0 0 auto;
-        padding:calc(env(safe-area-inset-bottom) + 15px) 0 15px;
-        padding:calc(env(safe-area-inset-bottom) + 15px) 0 15px}
+        padding:15px 0 15px;
+        padding:calc(constant(safe-area-inset-top) + 15px) 0 15px;
+        padding:calc(env(safe-area-inset-top) + 15px) 0 15px}
         article{position:relative;background:pink;}
         article::before{content:'';display:block;height:50px;}
         /* .f_wrap{display:flex;flex-direction:column;height:100vh}
@@ -20,7 +22,7 @@
 </head>
 <body class="f_wrap">
     <header>
-        <h2>상단 픽시 f_wrap </h2>
+        <h2>상단 픽시 viewport </h2>
     </header>
     <article class="f_cont">
         <div class="f_box">
