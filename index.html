@@ -7,14 +7,15 @@
     <link rel="stylesheet" type="text/css" href="common.css">
     <title>Document</title>
     <style>
-        header{position:fixed;height:50px;width:100%;top:0;left:0;z-index:999;background:#fff;border-bottom:1px solid red;
+        *{box-sizing: border-box;}
+        header{position:fixed;width:100%;top:0;left:0;z-index:999;background:#fff;border-bottom:1px solid red;
         flex: 0 0 auto;
         padding:calc(env(safe-area-inset-bottom) + 15px) 0 15px;
         padding:calc(env(safe-area-inset-bottom) + 15px) 0 15px}
-        article{position:relative;height:2000px;background:pink;}
+        article{position:relative;background:pink;}
         article::before{content:'';display:block;height:50px;}
-        .f_wrap{display:flex;flex-direction:column;height:100vh}
-        .f_wrap .f_cont{position:relative;display:flex;flex-direction:column;flex:1 auto; background:pink;;}
+        /* .f_wrap{display:flex;flex-direction:column;height:100vh}
+        .f_wrap .f_cont{position:relative;display:flex;flex-direction:column;flex:1 auto; background:pink;;} */
     </style>
 </head>
 <body class="f_wrap">
