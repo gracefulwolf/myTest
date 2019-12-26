@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" href="common.css">
     <title>Document</title>
     <style>
-        header{position:fixed;height:50px;width:100%;top:0;left;z-index:999;background:#fff;border-bottom:1px solid red;}
+        header{position:fixed;height:50px;width:100%;top:0;left:0;z-index:999;background:#fff;border-bottom:1px solid red;
+        padding:calc(env(safe-area-inset-bottom) + 15px) 0 15px;
+        padding:calc(env(safe-area-inset-bottom) + 15px) 0 15px}
         article{position:relative;height:2000px;background:pink;}
         article::before{content:'';display:block;height:50px;}
     </style>
