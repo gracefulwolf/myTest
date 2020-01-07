@@ -37,6 +37,20 @@ var srUI = {
             srUI.chgListSet($thisWrap);
         });
 
+
+        // 행 위로
+        $('.btn-up').off('click').on('click', function(){
+            var $thisWrap = $(this).parents('.ui-chg-list');
+
+            if($thisWrap.find('input:checked').parents('tr').length === 1){
+                console.log($thisWrap.find('input:checked').parents('tr').length)
+            }else{
+                alert('1개만 선택해주세요')
+                $thisWrap.find('input:checkbox').prop('checked',false)
+            }
+            
+            
+        });
     },
 
     chgListSet : function(obj){
